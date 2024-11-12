@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homeopathy Organization</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://img.freepik.com/free-vector/homeopathy-isometric-composition_1284-21705.jpg?w=826&t=st=1729064236~exp=1729064836~hmac=0e8783399567b1e2d1dc2ca6ee56fb9189a6ac0e2b6a2b098aaf93b8e1f25220"
+      sizes="32x32"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary-color: #4caf50;
+        --secondary-color: #8bc34a;
+        --accent-color: #ffc107;
+        --text-color: #333;
+        --light-bg: #f1f8e9;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+        color: var(--text-color);
+        background-color: var(--light-bg);
+      }
+      .navbar {
+        background-color: var(--primary-color) !important;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .navbar-light .navbar-brand,
+      .navbar-light .navbar-nav .nav-link {
+        color: white !important;
+        transition: color 0.3s ease;
+      }
+      .navbar-light .navbar-nav .nav-link:hover {
+        color: var(--accent-color) !important;
+      }
+      .hero {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url("https://img.freepik.com/free-photo/successful-medical-team_329181-9252.jpg?w=1380&t=st=1729064105~exp=1729064705~hmac=02ff44b1dc73853cc60150b0eae9ca79d7cf3a3c6c268b85869668005af0a70b");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        padding: 100px 0;
+      }
+      .principle-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: var(--accent-color);
+      }
+      .card {
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+      .card:hover {
+        transform: translateY(-5px);
+      }
+      .card-header {
+        background-color: var(--secondary-color);
+        color: white;
+        border-radius: 15px 15px 0 0 !important;
+      }
+      .btn-primary {
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+        border-radius: 25px;
+        padding: 10px 25px;
+        transition: all 0.3s ease;
+      }
+      .btn-primary:hover {
+        background-color: var(--secondary-color);
+        border-color: var(--secondary-color);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      footer {
+        background-color: var(--primary-color) !important;
+        color: white;
+      }
+      .section-title {
+        position: relative;
+        display: inline-block;
+        padding-bottom: 10px;
+        margin-bottom: 30px;
+      }
+      .section-title::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 50px;
+        height: 3px;
+        background-color: var(--accent-color);
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .testimonial-card {
+        background-color: #fff;
+        border-radius: 15px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .testimonial-card img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        margin-right: 15px;
+      }
+      .contact-info i {
+        color: var(--primary-color);
+        margin-right: 10px;
+      }
+      .scroll-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: none;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        background-color: var(--primary-color);
+        color: white;
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 1000;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <i class="fas fa-leaf me-2"></i>Homeopathy Org
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#principles">Principles</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#conference">Conference</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonials">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero py-5 mb-5">
+      <div class="container text-center py-5">
+        <h1 class="display-4 fw-bold mb-3">Advancing Natural Healthcare</h1>
+        <p class="lead mb-4">
+          Join us in our mission to promote safe, effective, and holistic
+          healing through homeopathy.
+        </p>
+        <a href="#about" class="btn btn-primary btn-lg">Learn More</a>
+      </div>
+    </section>
+
+    <div class="container">
+      <section id="about" class="mb-5">
+        <h2 class="text-center mb-4 section-title">About Us</h2>
+        <div class="card mb-4">
+          <div class="card-header">
+            <h3 class="mb-0">Our Mission</h3>
+          </div>
+          <div class="card-body">
+            <p>
+              Founded in 2010, the Homeopathy Organization is a leading global
+              network promoting safe, effective, and natural healthcare
+              solutions. Our mission is to educate and build awareness about the
+              benefits of homeopathic medicine, and to create a community of
+              practitioners, researchers, and advocates committed to advancing
+              healthcare solutions that prioritize the well-being of patients.
+            </p>
+          </div>
+        </div>
+
+        <div class="row align-items-center">
+          <div class="col-md-6 mb-4 mb-md-0">
+            <img
+              src="https://img.freepik.com/free-photo/successful-medical-team_329181-9252.jpg?w=1380&t=st=1729064105~exp=1729064705~hmac=02ff44b1dc73853cc60150b0eae9ca79d7cf3a3c6c268b85869668005af0a70b"
+              alt="Homeopathy team image"
+              class="img-fluid rounded shadow"
+            />
+          </div>
+          <div class="col-md-6">
+            <h3>Our Vision</h3>
+            <p>
+              We envision a future where homeopathic medicine is widely
+              recognized and integrated into mainstream healthcare. By promoting
+              research, innovation, and professional development, we aim to
+              foster the growth of homeopathy and improve global health
+              outcomes.
+            </p>
+            <p>
+              Our organization serves as a hub for education, advocacy, and
+              collaboration, bringing together healthcare professionals and
+              patients who share a commitment to holistic, natural, and
+              patient-centered healthcare.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="principles" class="mb-5">
+        <h2 class="text-center mb-4 section-title">Principles of Homeopathy</h2>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 text-center">
+              <div class="card-body">
+                <div class="principle-icon">
+                  <i class="fas fa-seedling"></i>
+                </div>
+                <h3 class="card-title">Like Cures Like</h3>
+                <p class="card-text">
+                  The principle that a substance capable of producing symptoms
+                  in a healthy person can cure similar symptoms in a sick
+                  person.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 text-center">
+              <div class="card-body">
+                <div class="principle-icon">
+                  <i class="fas fa-tint"></i>
+                </div>
+                <h3 class="card-title">Minimum Dose</h3>
+                <p class="card-text">
+                  The idea that the lower the dose of the medication, the
+                  greater its effectiveness. This involves a process called
+                  potentization.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 text-center">
+              <div class="card-body">
+                <div class="principle-icon">
+                  <i class="fas fa-flask"></i>
+                </div>
+                <h3 class="card-title">Single Remedy</h3>
+                <p class="card-text">
+                  The practice of using one remedy at a time to clearly observe
+                  its effects and avoid confusing the picture with multiple
+                  interventions.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="conference" class="mb-5">
+        <h2 class="text-center mb-4 section-title">
+          Homeopathy Conference 2025
+        </h2>
+        <div class="card">
+          <img
+            src="https://img.freepik.com/free-vector/homeopathy-isometric-composition_1284-21705.jpg?w=826&t=st=1729064236~exp=1729064836~hmac=0e8783399567b1e2d1dc2ca6ee56fb9189a6ac0e2b6a2b098aaf93b8e1f25220"
+            alt="Conference image"
+            class="card-img-top"
+            height="500px"
+          />
+          <div class="card-body">
+            <p class="card-text">
+              Join us for the Homeopathy Conference 2025, to be held on January
+              12-14, 2025, at the Health Science Center in Springfield. This
+              global event brings together leading practitioners, researchers,
+              and enthusiasts to discuss the latest trends and advancements in
+              homeopathic medicine.
+            </p>
+
+            <h3>Conference Highlights:</h3>
+            <ul class="list-group list-group-flush mb-3">
+              <li class="list-group-item">
+                <i class="fas fa-check-circle text-success me-2"></i>Keynote
+                sessions with renowned homeopathy experts
+              </li>
+              <li class="list-group-item">
+                <i class="fas fa-check-circle text-success me-2"></i>Hands-on
+                workshops and practical training sessions
+              </li>
+              <li class="list-group-item">
+                <i class="fas fa-check-circle text-success me-2"></i>Networking
+                opportunities with healthcare professionals from across the
+                world
+              </li>
+              <li class="list-group-item">
+                <i class="fas fa-check-circle text-success me-2"></i>Latest
+                research presentations and discussions on emerging trends
+              </li>
+              <li class="list-group-item">
+                <i class="fas fa-check-circle text-success me-2"></i>Exhibition
+                showcasing innovative homeopathic products and technologies
+              </li>
+              <li class="list-group-item">
+                <i class="fas fa-check-circle text-success me-2"></i>Panel
+                discussions on integrating homeopathy with conventional medicine
+              </li>
+            </ul>
+
+            <p class="card-text">
+              Early bird registration is now open! Don't miss this opportunity
+              to be part of the largest homeopathy event of the year.
+            </p>
+            <a href="#" class="btn btn-primary">Register Now</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonials" class="mb-5">
+        <h2 class="text-center mb-4 section-title">What Our Community Says</h2>
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="testimonial-card">
+              <div class="d-flex align-items-center mb-3">
+                <img
+                  src="https://randomuser.me/api/portraits/women/65.jpg"
+                  alt="Dr. Sarah Johnson"
+                  class="rounded-circle"
+                />
+                <div>
+                  <h5 class="mb-0">Dr. Sarah Johnson</h5>
+                  <small class="text-muted">Homeopathic Physician</small>
+                </div>
+              </div>
+              <p class="mb-0">
+                "The Homeopathy Organization has been instrumental in my journey
+                as a practitioner. The resources and community support they
+                provide are unparalleled."
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="testimonial-card">
+              <div class="d-flex align-items-center mb-3">
+                <img
+                  src="https://randomuser.me/api/portraits/men/32.jpg"
+                  alt="Michael Chen"
+                  class="rounded-circle"
+                />
+                <div>
+                  <h5 class="mb-0">Michael Chen</h5>
+                  <small class="text-muted">Patient</small>
+                </div>
+              </div>
+              <p class="mb-0">
+                "I've seen remarkable improvements in my health since embracing
+                homeopathy. This organization is doing crucial work in promoting
+                natural healing."
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="mb-5">
+        <h2 class="text-center mb-4 section-title">Get in Touch</h2>
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">Contact Information</h3>
+            <ul class="list-unstyled contact-info">
+              <li>
+                <i class="fas fa-envelope"></i> info@homeopathyorganization.com
+              </li>
+              <li><i class="fas fa-phone"></i> +123 456 7890</li>
+              <li>
+                <i class="fas fa-map-marker-alt"></i> 123 Natural Way,
+                Springfield, ST 12345
+              </li>
+            </ul>
+            <!-- <form>
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" required />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required />
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  rows="4"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                Send Message
+              </button>
+            </form> -->
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="py-4 mt-5">
+      <div class="container text-center">
+        <p>&copy; 2024 Homeopathy Organization. All rights reserved.</p>
+        <div class="social-icons mt-3">
+          <a href="#" class="text-white me-3"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-white me-3"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="scroll-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+
+      // Scroll to top button
+      const scrollToTopBtn = document.querySelector(".scroll-to-top");
+      window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 100) {
+          scrollToTopBtn.style.display = "block";
+        } else {
+          scrollToTopBtn.style.display = "none";
+        }
+      });
+
+      scrollToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+
+      // Add animation to cards on scroll
+      const cards = document.querySelectorAll(".card");
+      const animateCards = () => {
+        cards.forEach((card) => {
+          const cardTop = card.getBoundingClientRect().top;
+          const triggerBottom = window.innerHeight * 0.8;
+          if (cardTop < triggerBottom) {
+            card.classList.add("animate__animated", "animate__fadeInUp");
+          }
+        });
+      };
+
+      window.addEventListener("scroll", animateCards);
+      animateCards(); // Initial check on page load
+    </script>
+  </body>
+</html>
